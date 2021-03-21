@@ -4,4 +4,8 @@ node: circleci/node@3.0.0
 workflows:
 node-tests:
 jobs:
-- node/ test
+  build: 
+    docker:       
+      - image: buildpack-deps:trusty        
+    steps:       
+      - run: echo "hello world"          t
